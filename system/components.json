@@ -1,0 +1,39 @@
+{
+  "topic-card": {
+    "description": "One patient education topic. Only entries with Status = Published are shown.",
+    "show-when": { "Status": "Published" },
+    "variants": {
+      "default": { "background": "surface.default", "foreground": "text.default" },
+      "subtle": { "background": "surface.subtle", "foreground": "text.default" },
+      "highlight": { "background": "surface.brand", "foreground": "text.on-brand" }
+    },
+    "slots": {
+      "heading": { "property": "Title", "accepts": ["title"] },
+      "body": { "property": "Summary", "accepts": ["rich_text"] },
+      "badge": { "property": "Specialty", "accepts": ["select"], "component": "specialty-badge" },
+      "meta": { "property": "Last reviewed", "accepts": ["date"] },
+      "related": { "property": "Related topics", "accepts": ["relation"], "component": "related-list" }
+    }
+  },
+  "specialty-badge": {
+    "description": "Colour-coded label. There is one variant per Specialty option in the content schema.",
+    "variant-source": "Specialty",
+    "variants": {
+      "cardiology": { "background": "color.specialty.cardiology", "foreground": "text.on-brand" },
+      "endocrinology": { "background": "color.specialty.endocrinology", "foreground": "text.on-brand" },
+      "respiratory": { "background": "color.specialty.respiratory", "foreground": "text.on-brand" }
+    },
+    "slots": {
+      "label": { "property": "Specialty", "accepts": ["select"] }
+    }
+  },
+  "related-list": {
+    "description": "Links to other topics through the Related topics relation.",
+    "variants": {
+      "default": { "background": "surface.default", "foreground": "text.muted" }
+    },
+    "slots": {
+      "items": { "property": "Related topics", "accepts": ["relation"] }
+    }
+  }
+}
