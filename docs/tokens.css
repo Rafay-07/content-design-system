@@ -1,0 +1,33 @@
+:root {
+  --color-brand-primary: #1f5fad;
+  --color-brand-primary-dark: #164682;
+  --color-neutral-900: #1b1f24;
+  --color-neutral-600: #56606b;
+  --color-neutral-200: #dde2e8;
+  --color-neutral-100: #f3f5f8;
+  --color-neutral-0: #ffffff;
+  --color-specialty-cardiology: #a52a24;
+  --color-specialty-endocrinology: #6a3d9a;
+  --color-specialty-respiratory: #1d6b5a;
+  --text-default: var(--color-neutral-900);
+  --text-muted: var(--color-neutral-600);
+  --text-on-brand: var(--color-neutral-0);
+  --surface-default: var(--color-neutral-0);
+  --surface-subtle: var(--color-neutral-100);
+  --surface-brand: var(--color-brand-primary);
+  --border-default: var(--color-neutral-200);
+  --font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

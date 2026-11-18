@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content design system</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+body { margin: 0; font-family: var(--font-family-base); font-size: var(--font-size-md);
+       color: var(--text-default); background: var(--surface-subtle); }
+main { max-width: 960px; margin: 0 auto; padding: var(--space-6) var(--space-4); }
+h1 { font-size: var(--font-size-xl); margin: 0 0 var(--space-2); }
+h2 { font-size: var(--font-size-lg); margin: var(--space-6) 0 var(--space-3);
+     padding-bottom: var(--space-2); border-bottom: 1px solid var(--border-default); }
+p.lead { color: var(--text-muted); margin: 0; }
+.grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.swatches { display: grid; gap: var(--space-2); grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.swatch { background: var(--surface-default); border: 1px solid var(--border-default);
+          border-radius: var(--radius-md); overflow: hidden; font-size: var(--font-size-sm); }
+.swatch .chip { height: 48px; border-bottom: 1px solid var(--border-default); }
+.swatch div.label { padding: var(--space-2); overflow-wrap: anywhere; }
+.swatch code { display: block; color: var(--text-muted); }
+.topic-card { border: 1px solid var(--border-default); border-radius: var(--radius-md);
+              padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); }
+.topic-card h3 { margin: 0; font-size: var(--font-size-lg); }
+.topic-card p { margin: 0; }
+.topic-card .meta { font-size: var(--font-size-sm); }
+.specialty-badge { align-self: flex-start; border-radius: var(--radius-sm); font-size: var(--font-size-sm);
+                   font-weight: var(--font-weight-bold); padding: var(--space-1) var(--space-2); }
+.related-list { font-size: var(--font-size-sm); margin: 0; padding: 0; list-style: none; }
+.related-list a { color: inherit; }
+.tag { font-size: var(--font-size-sm); color: var(--text-muted); }
+.report { background: var(--surface-default); border: 1px solid var(--border-default);
+          border-radius: var(--radius-md); padding: var(--space-4); }
+.type-row { display: flex; gap: var(--space-4); align-items: baseline; padding: var(--space-2) 0; }
+.type-row code { width: 160px; color: var(--text-muted); font-size: var(--font-size-sm); }
+</style>
+</head>
+<body>
+<main>
+<h1>Content design system</h1>
+<p class="lead">Generated from system/tokens.json, system/components.json and the
+Patient education topics content database. Sample content only, not medical advice.</p>
+
+<h2>Colour tokens</h2>
+<div class="swatches"><div class="swatch"><div class="chip" style="background: var(--color-brand-primary)"></div><div class="label">color.brand.primary<code>#1f5fad</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-brand-primary-dark)"></div><div class="label">color.brand.primary-dark<code>#164682</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-neutral-900)"></div><div class="label">color.neutral.900<code>#1b1f24</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-neutral-600)"></div><div class="label">color.neutral.600<code>#56606b</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-neutral-200)"></div><div class="label">color.neutral.200<code>#dde2e8</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-neutral-100)"></div><div class="label">color.neutral.100<code>#f3f5f8</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-neutral-0)"></div><div class="label">color.neutral.0<code>#ffffff</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-specialty-cardiology)"></div><div class="label">color.specialty.cardiology<code>#a52a24</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-specialty-endocrinology)"></div><div class="label">color.specialty.endocrinology<code>#6a3d9a</code></div></div><div class="swatch"><div class="chip" style="background: var(--color-specialty-respiratory)"></div><div class="label">color.specialty.respiratory<code>#1d6b5a</code></div></div><div class="swatch"><div class="chip" style="background: var(--text-default)"></div><div class="label">text.default<code>#1b1f24</code></div></div><div class="swatch"><div class="chip" style="background: var(--text-muted)"></div><div class="label">text.muted<code>#56606b</code></div></div><div class="swatch"><div class="chip" style="background: var(--text-on-brand)"></div><div class="label">text.on-brand<code>#ffffff</code></div></div><div class="swatch"><div class="chip" style="background: var(--surface-default)"></div><div class="label">surface.default<code>#ffffff</code></div></div><div class="swatch"><div class="chip" style="background: var(--surface-subtle)"></div><div class="label">surface.subtle<code>#f3f5f8</code></div></div><div class="swatch"><div class="chip" style="background: var(--surface-brand)"></div><div class="label">surface.brand<code>#1f5fad</code></div></div><div class="swatch"><div class="chip" style="background: var(--border-default)"></div><div class="label">border.default<code>#dde2e8</code></div></div></div>
+
+<h2>Type scale</h2>
+<div class="type-row"><code>font.size.sm</code><span style="font-size: var(--font-size-sm)">Patient education topic</span></div><div class="type-row"><code>font.size.md</code><span style="font-size: var(--font-size-md)">Patient education topic</span></div><div class="type-row"><code>font.size.lg</code><span style="font-size: var(--font-size-lg)">Patient education topic</span></div><div class="type-row"><code>font.size.xl</code><span style="font-size: var(--font-size-xl)">Patient education topic</span></div>
+
+<h2>Components</h2>
+<div class="grid"><div><p class="tag">topic-card / default</p><article class="topic-card" id="bp-home" style="background: var(--surface-default); color: var(--text-default);"><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span><h3>Checking your blood pressure at home</h3><p>When to measure, how to sit, and what to write down before your next appointment.</p><span class="meta">Last reviewed 2026-10-02</span><ul class="related-list"><li>Related:</li><li><a href="#heart-eating">Heart-healthy eating basics</a></li></ul></article></div><div><p class="tag">topic-card / subtle</p><article class="topic-card" id="bp-home" style="background: var(--surface-subtle); color: var(--text-default);"><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span><h3>Checking your blood pressure at home</h3><p>When to measure, how to sit, and what to write down before your next appointment.</p><span class="meta">Last reviewed 2026-10-02</span><ul class="related-list"><li>Related:</li><li><a href="#heart-eating">Heart-healthy eating basics</a></li></ul></article></div><div><p class="tag">topic-card / highlight</p><article class="topic-card" id="bp-home" style="background: var(--surface-brand); color: var(--text-on-brand);"><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span><h3>Checking your blood pressure at home</h3><p>When to measure, how to sit, and what to write down before your next appointment.</p><span class="meta">Last reviewed 2026-10-02</span><ul class="related-list"><li>Related:</li><li><a href="#heart-eating">Heart-healthy eating basics</a></li></ul></article></div></div>
+<p class="tag">specialty-badge: one variant per Specialty option</p>
+<p><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span> <span class="specialty-badge" style="background: var(--color-specialty-endocrinology); color: var(--text-on-brand);">Endocrinology</span> <span class="specialty-badge" style="background: var(--color-specialty-respiratory); color: var(--text-on-brand);">Respiratory</span></p>
+
+<h2>Content preview</h2>
+<p class="tag">3 published topic(s). 1 hidden by the show-when rule (not Published).</p>
+<div class="grid"><article class="topic-card" id="bp-home" style="background: var(--surface-default); color: var(--text-default);"><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span><h3>Checking your blood pressure at home</h3><p>When to measure, how to sit, and what to write down before your next appointment.</p><span class="meta">Last reviewed 2026-10-02</span><ul class="related-list"><li>Related:</li><li><a href="#heart-eating">Heart-healthy eating basics</a></li></ul></article><article class="topic-card" id="heart-eating" style="background: var(--surface-default); color: var(--text-default);"><span class="specialty-badge" style="background: var(--color-specialty-cardiology); color: var(--text-on-brand);">Cardiology</span><h3>Heart-healthy eating basics</h3><p>Simple swaps for salt, fats and portions, with a sample grocery list.</p><span class="meta">Last reviewed 2026-09-18</span><ul class="related-list"><li>Related:</li><li><a href="#bp-home">Checking your blood pressure at home</a></li></ul></article><article class="topic-card" id="inhaler" style="background: var(--surface-default); color: var(--text-default);"><span class="specialty-badge" style="background: var(--color-specialty-respiratory); color: var(--text-on-brand);">Respiratory</span><h3>Using a metered-dose inhaler</h3><p>Step-by-step technique, spacer use, and how to tell when the inhaler is empty.</p><span class="meta">Last reviewed 2026-08-30</span></article></div>
+
+<h2>Lint report</h2>
+<div class="report"><p>All checks pass: token names, aliases, contrast, slot bindings and content rows.</p></div>
+</main>
+</body>
+</html>
