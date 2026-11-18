@@ -1,0 +1,12 @@
+{
+  "database": "Patient education topics",
+  "properties": {
+    "Title": { "type": "title", "required": true, "max_length": 60 },
+    "Summary": { "type": "rich_text", "required": true, "max_length": 160 },
+    "Specialty": { "type": "select", "required": true, "options": ["Cardiology", "Endocrinology", "Respiratory"] },
+    "Reading level": { "type": "select", "options": ["Plain language", "Clinical"] },
+    "Status": { "type": "status", "required": true, "options": ["Draft", "In review", "Published"] },
+    "Related topics": { "type": "relation", "database": "Patient education topics" },
+    "Last reviewed": { "type": "date" }
+  }
+}

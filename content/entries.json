@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bp-home",
+    "Title": "Checking your blood pressure at home",
+    "Summary": "When to measure, how to sit, and what to write down before your next appointment.",
+    "Specialty": "Cardiology",
+    "Reading level": "Plain language",
+    "Status": "Published",
+    "Related topics": ["heart-eating"],
+    "Last reviewed": "2026-10-02"
+  },
+  {
+    "id": "heart-eating",
+    "Title": "Heart-healthy eating basics",
+    "Summary": "Simple swaps for salt, fats and portions, with a sample grocery list.",
+    "Specialty": "Cardiology",
+    "Reading level": "Plain language",
+    "Status": "Published",
+    "Related topics": ["bp-home"],
+    "Last reviewed": "2026-09-18"
+  },
+  {
+    "id": "inhaler",
+    "Title": "Using a metered-dose inhaler",
+    "Summary": "Step-by-step technique, spacer use, and how to tell when the inhaler is empty.",
+    "Specialty": "Respiratory",
+    "Reading level": "Plain language",
+    "Status": "Published",
+    "Related topics": [],
+    "Last reviewed": "2026-08-30"
+  },
+  {
+    "id": "glucose-log",
+    "Title": "Keeping a blood sugar log",
+    "Summary": "What to record each day and how to bring the log to your care team.",
+    "Specialty": "Endocrinology",
+    "Reading level": "Plain language",
+    "Status": "In review",
+    "Related topics": [],
+    "Last reviewed": "2026-11-01"
+  }
+]
